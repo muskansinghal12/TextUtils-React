@@ -1,16 +1,16 @@
 //import logo from './logo.svg';
 import './App.css';
-import About from './components/About';
+//import About from './components/About';
 import Navbar from './components/Navbar.js';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
 import Alert from './components/Alert';
-import {
+/*import {
   BrowserRouter,
   Link,
   Route,
   Routes,
-} from "react-router-dom";
+} from "react-router-dom";*/
 
 
 function App() {
@@ -51,15 +51,16 @@ function App() {
   return (
     <>
     
-    <BrowserRouter>
+   {/* / <BrowserRouter> */}
     <Navbar title = "TextUtils" aboutTitle = "About Us" mode = {mode} toggle = {toggleMode}/>
     <Alert alert = {alert}/>
-      <Routes>
-        <Route exact path="/" element={<TextForm heading = "Enter your text here" mode = {mode} alert = {showAlert}/>} />
-        <Route exact path="/about" element={<About/>} />
+      {/* <Routes> */}
+        {/* <Route exact path="/" element={<TextForm heading = "Enter your text here" mode = {mode} alert = {showAlert}/>} /> */}
+        <TextForm heading = "Enter your text here" mode = {mode} alert = {showAlert}/>
+        {/* <Route exact path="/about" element={<About/>} /> */}
         
-      </Routes>
-    </BrowserRouter>
+      {/* </Routes> */}
+    {/* </BrowserRouter> */}
     
 
     
